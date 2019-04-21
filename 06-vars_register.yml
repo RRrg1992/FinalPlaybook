@@ -1,0 +1,15 @@
+- name: Demo on how to register variables from tasks
+  hosts: all
+  tasks:
+   - name : Execute as Shell command
+     shell: id
+     register: out
+
+   - name: Print out variable content
+     debug:
+       msg: "{{out}}"
+
+   - name : print only output of id command
+     debug:
+       msg: "{{out.stdout}}"   
+       

@@ -1,0 +1,13 @@
+- hosts: all
+  vars_files:
+   - constant.yml
+   - 03-vars_promt.yml
+  tasks:
+   - name: PrintUrl
+     debug:
+      msg: URL = {{URL}}  
+   - name: printName
+     debug:
+       msg: NAME = {{NAME}}
+  
+

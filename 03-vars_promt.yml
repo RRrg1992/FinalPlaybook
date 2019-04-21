@@ -1,0 +1,28 @@
+- name: Demo for vars_promt
+  hosts: all
+  vars_prompt:
+
+    - prompt: Enter the name
+      name: NAME  
+      private: no
+    
+    - prompt: Enter the Mobile
+      name: MOBILE
+      private: no
+          
+    - prompt: Enter the Password
+      name: PASSWORD
+      private: no
+
+
+  tasks:
+    - name: Print Password
+      debug:
+        msg: PASSWORD = {{PASSWORD}}
+    - name: print the name
+      debug:
+        msg: NAME = {{NAME}}   
+    - name: Enter The mobile Number
+      debug:
+        msg: MOBILE = {{MOBILE}}
+        

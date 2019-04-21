@@ -1,0 +1,6 @@
+- name: Deno on variable accessing from command line
+  hosts: all
+  tasks:
+   - name: Print the URL Which parsed in ansible-playbooks
+     debug:
+      msg: URL = {{URL}}
