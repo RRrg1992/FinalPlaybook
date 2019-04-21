@@ -1,0 +1,9 @@
+- name: Install java
+  package:
+    name: java
+    state: present
+
+- name: Create student user
+  user:
+    name: {{APPUSER}}
+    
